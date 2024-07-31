@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How the PubMed Scraper Works</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>How the PubMed Scraper Works</h1>
+            <a href="{{ url_for('index') }}" class="how-it-works-link">Back to Scraper</a>
+        </header>
+        <main>
+            <h2>Scraping Algorithm</h2>
+            <ol>
+                <li>The user inputs search parameters (protein target, max results, max author publications).</li>
+                <li>The scraper generates a PubMed search query based on the input.</li>
+                <li>It sends requests to PubMed and parses the search results pages.</li>
+                <li>For each article found:
+                    <ul>
+                        <li>Extracts title, authors, and link</li>
+                        <li>Retrieves the full article page to extract the abstract and email addresses</li>
+                        <li>Analyzes the abstract to determine potential antibody needs</li>
+                        <li>Checks the lead author's publication count</li>
+                    </ul>
+                </li>
+                <li>Results are streamed back to the user's browser in real-time.</li>
+                <li>The data can be viewed in the browser or exported to an Excel file.</li>
+            </ol>
+            <p>The scraper uses libraries like BeautifulSoup for HTML parsing and NLTK for text analysis. It respects PubMed's robots.txt and includes delays between requests to avoid overloading their servers.</p>
+        </main>
+    </div>
+</body>
+</html>

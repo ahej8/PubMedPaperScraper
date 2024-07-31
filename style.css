@@ -1,0 +1,219 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --border-color: #dee2e6;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+.how-it-works-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.how-it-works-link:hover {
+    text-decoration: underline;
+}
+
+form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+#advanced-search {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.progress {
+    margin-top: 2rem;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: var(--primary-color);
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    transition: width 0.5s ease;
+}
+
+#results {
+    margin-top: 2rem;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    display: block;
+}
+
+.results-table th,
+.results-table td {
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+    max-width: 200px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.results-table th {
+    background-color: var(--primary-color);
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+.results-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.results-table tr:hover {
+    background-color: #e9ecef;
+}
+
+.results-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.results-table .authors-col {
+    max-width: 300px;
+    white-space: normal;
+}
+
+.results-table .email-col {
+    max-width: 200px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.results-table .summary-col {
+    max-width: 400px;
+    white-space: normal;
+}
+
+.results-table a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.results-table a:hover {
+    text-decoration: underline;
+}
+
+#export-excel {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#export-excel:hover {
+    background-color: #0056b3;
+}
+
+/* Add this to your existing CSS */
+.results-table .title-col {
+    max-width: 300px; /* Adjust this value as needed */
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.results-table td {
+    vertical-align: top;
+    padding: 10px;
+}

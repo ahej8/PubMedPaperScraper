@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PubMed Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PubMed Scraper</h1>
+            <a href="{{ url_for('how_it_works') }}" class="how-it-works-link">How It Works</a>
+        </header>
+        <main>
+            <form id="scraper-form">
+                <div class="form-group">
+                    <label for="max-results">Max Results:</label>
+                    <input type="number" id="max-results" name="max-results" required>
+                </div>
+                
+                <button type="button" id="toggle-advanced" class="btn-secondary">Advanced Search (Optional)</button>
+                
+                <div id="advanced-search" style="display: none;">
+                    <div class="form-group">
+                        <label for="protein-target">Protein Target:</label>
+                        <input type="text" id="protein-target" name="protein-target">
+                    </div>
+                    <div class="form-group">
+                        <label for="max-publications">Max Author Publications:</label>
+                        <input type="number" id="max-publications" name="max-publications">
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-primary">Scrape PubMed</button>
+            </form>
+            <div id="progress-container" class="progress">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            
+            <div id="results"></div>
+            
+            <button id="export-excel" style="display: none;">Export to Excel</button>
+        </main>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
